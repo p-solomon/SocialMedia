@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts  
+Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">  
+<struts>  
+<package name="default" extends="struts-default">  
+  
+<action name="login" method="login" class="com.pojo.Login">  
+<result name="success">welcome.jsp</result> 
+<result name="failure">loginFailure.jsp</result> 
+ 
+</action>
+
+<action name="signupRequest" method="signupRequest" class="com.pojo.Login">  
+<result name="success">signup.jsp</result>  
+</action> 
+<action name="signup" method="register" class="com.pojo.Login">  
+<result name="success">SignUpSuccess.jsp</result> 
+<result name="failure">SignUpFailure.jsp</result> 
+</action>  
+<action name="loginPage" method="loginPage" class="com.pojo.Login">  
+<result name="success">index.jsp</result>  
+</action> 
+<action name="sendRequest" method="sendRequest" class="com.pojo.Login">  
+<result name="success">requestSuccess.jsp</result>  
+<result name="failure">requestFailure.jsp</result>  
+</action> 
+<action name="logout" class="com.pojo.Login" method="logout">  
+<result name="success" >index.jsp</result>  
+</action> 
+ <action name="viewFrofile" class="com.pojo.Login" method="viewFrofile">  
+<result name="success" >viewFrofile.jsp</result>  
+</action> 
+<action name="viewAllUsers" class="com.pojo.Login" method="viewAllUsers">  
+<result name="success" >viewAllUsers.jsp</result>  
+</action> 
+<action name="friendRequests" class="com.pojo.Login" method="friendRequests">  
+<result name="success" >friendRequests.jsp</result>  
+</action>
+<action name="acceotRequest" class="com.pojo.Login" method="acceotRequest">  
+<result name="success" >friendRequestsSuccess.jsp</result>  
+</action>
+<action name="rejectRequest" class="com.pojo.Login" method="rejectRequest">  
+<result name="success" >friendRequestsSuccess.jsp</result>  
+</action> 
+<action name="myFriendsList" class="com.pojo.Login" method="myFriendsList">  
+<result name="success" >myFriendsList.jsp</result>  
+</action> 
+
+  
+</package>  
+</struts>   
